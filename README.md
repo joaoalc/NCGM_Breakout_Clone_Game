@@ -15,7 +15,7 @@
 * [Pong](https://noobtuts.com/unity/2d-pong-game)
 * [Creating a Breakout Game for Beginners](https://unity3d.com/pt/learn/tutorials/modules/beginner/live-training-archive/creating-a-breakout-game)
 
-* [How to clone project using SourceTree](https://youtu.be/yCw44AtcEKw?t=199) - Ignore the fact that in the video, instead of GitHub, it's being used BitBucket, the process using GitHub is the same.
+* [How to clone project using SourceTree](https://youtu.be/yCw44AtcEKw?t=199) - Ignore the fact that in the video, instead of GitHub, it's being used BitBucket, the process using GitHub is the same. Use https://github.com/necg/Breakout_Team_5.git in the "Source path/url" field.
 
 ## Great Youtube Channels
 * [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA) - Everything Unity related, from basic to advanced
