@@ -10,6 +10,9 @@
 **Optional**
 * Visual Studio Community
 
+## Useful links
+* [Ideas](https://docs.google.com/document/d/1AruBDIaRn8aJL0evEaZ5ik0nuvq1O-76xzyvsQXNKfY/edit?usp=sharing)
+
 ## Starting Tutorials
 
 * [Pong](https://noobtuts.com/unity/2d-pong-game)
