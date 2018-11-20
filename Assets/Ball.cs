@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         // Initial Velocity
-        GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
+        GetComponent<Rigidbody2D>().velocity = Vector2.down * speed;
     }
 
     float hitFactor(Vector2 ballPos, Vector2 racketPos, float racketWidth)
