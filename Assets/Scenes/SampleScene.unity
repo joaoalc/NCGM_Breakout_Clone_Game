@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
+  initialMaxAngle: 1.5707964
 --- !u!50 &2135921
 Rigidbody2D:
   serializedVersion: 4
@@ -187,7 +188,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.002041, y: 8.002037}
+  m_Size: {x: 8.5, y: 8.5}
   m_EdgeRadius: 0
 --- !u!212 &2135923
 SpriteRenderer:
@@ -242,7 +243,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2135919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -50, z: 0}
+  m_LocalPosition: {x: 0, y: -60, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -334,9 +335,10 @@ GameObject:
   - component: {fileID: 23899147}
   - component: {fileID: 23899146}
   - component: {fileID: 23899148}
+  - component: {fileID: 23899149}
   m_Layer: 0
   m_Name: Brick (15)
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,7 +379,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.057655, y: 15.920456}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &23899147
 SpriteRenderer:
@@ -436,6 +438,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &23899149
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23899144}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &82063076
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +697,7 @@ GameObject:
   - component: {fileID: 242972970}
   - component: {fileID: 242972969}
   - component: {fileID: 242972971}
+  - component: {fileID: 242972972}
   m_Layer: 0
   m_Name: Brick (18)
   m_TagString: Untagged
@@ -715,7 +741,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.993614, y: 15.98448}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &242972970
 SpriteRenderer:
@@ -774,6 +800,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &242972972
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 242972967}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &267435878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1068,7 @@ GameObject:
   - component: {fileID: 332794454}
   - component: {fileID: 332794456}
   - component: {fileID: 332794455}
+  - component: {fileID: 332794457}
   m_Layer: 0
   m_Name: WallBottom (1)
   m_TagString: Untagged
@@ -1110,6 +1160,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &332794457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 332794453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41ed5a1ccdfed04a9ecd248652c6a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &333364424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1214,7 @@ GameObject:
   - component: {fileID: 342054345}
   - component: {fileID: 342054344}
   - component: {fileID: 342054346}
+  - component: {fileID: 342054347}
   m_Layer: 0
   m_Name: Brick (8)
   m_TagString: Untagged
@@ -1196,7 +1258,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.057556, y: 15.984482}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &342054345
 SpriteRenderer:
@@ -1255,6 +1317,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &342054347
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 342054342}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &425570547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,6 +1395,7 @@ GameObject:
   - component: {fileID: 430166556}
   - component: {fileID: 430166555}
   - component: {fileID: 430166557}
+  - component: {fileID: 430166558}
   m_Layer: 0
   m_Name: Brick (9)
   m_TagString: Untagged
@@ -1353,7 +1439,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.05762, y: 15.920452}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &430166556
 SpriteRenderer:
@@ -1412,6 +1498,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &430166558
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 430166553}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &430509831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,6 +1791,7 @@ GameObject:
   - component: {fileID: 730126629}
   - component: {fileID: 730126628}
   - component: {fileID: 730126630}
+  - component: {fileID: 730126631}
   m_Layer: 0
   m_Name: Brick (12)
   m_TagString: Untagged
@@ -1725,7 +1835,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.993553, y: 15.920435}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &730126629
 SpriteRenderer:
@@ -1784,6 +1894,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &730126631
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 730126626}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &761654748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,9 +2270,10 @@ GameObject:
   - component: {fileID: 903068266}
   - component: {fileID: 903068265}
   - component: {fileID: 903068264}
+  - component: {fileID: 903068268}
   m_Layer: 0
   m_Name: Brick
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2155,6 +2289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
 --- !u!61 &903068265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2178,7 +2315,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.02823, y: 15.918938}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &903068266
 SpriteRenderer:
@@ -2239,6 +2376,26 @@ Transform:
   m_Father: {fileID: 425570548}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &903068268
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 903068263}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &931329362
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,6 +2609,7 @@ GameObject:
   - component: {fileID: 977588835}
   - component: {fileID: 977588834}
   - component: {fileID: 977588836}
+  - component: {fileID: 977588837}
   m_Layer: 0
   m_Name: Brick (7)
   m_TagString: Untagged
@@ -2495,7 +2653,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.057655, y: 16.04852}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &977588835
 SpriteRenderer:
@@ -2554,6 +2712,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &977588837
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 977588832}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &988856982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,6 +2745,7 @@ GameObject:
   - component: {fileID: 988856983}
   - component: {fileID: 988856985}
   - component: {fileID: 988856984}
+  - component: {fileID: 988856986}
   m_Layer: 0
   m_Name: WallBottom (3)
   m_TagString: Untagged
@@ -2655,6 +2837,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &988856986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988856982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41ed5a1ccdfed04a9ecd248652c6a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1054085717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2960,7 @@ GameObject:
   - component: {fileID: 1091797842}
   - component: {fileID: 1091797841}
   - component: {fileID: 1091797843}
+  - component: {fileID: 1091797844}
   m_Layer: 0
   m_Name: Brick (10)
   m_TagString: Untagged
@@ -2810,7 +3004,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.993645, y: 16.048523}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1091797842
 SpriteRenderer:
@@ -2869,6 +3063,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1091797844
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1091797839}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1132516095
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,6 +3400,7 @@ GameObject:
   - component: {fileID: 1277331800}
   - component: {fileID: 1277331799}
   - component: {fileID: 1277331801}
+  - component: {fileID: 1277331802}
   m_Layer: 0
   m_Name: Brick (13)
   m_TagString: Untagged
@@ -3226,7 +3444,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.05759, y: 15.920441}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1277331800
 SpriteRenderer:
@@ -3285,6 +3503,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1277331802
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277331797}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1332489398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,6 +3537,7 @@ GameObject:
   - component: {fileID: 1332489401}
   - component: {fileID: 1332489400}
   - component: {fileID: 1332489402}
+  - component: {fileID: 1332489403}
   m_Layer: 0
   m_Name: Brick (11)
   m_TagString: Untagged
@@ -3339,7 +3581,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.993614, y: 15.920431}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1332489401
 SpriteRenderer:
@@ -3398,6 +3640,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1332489403
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332489398}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1401654629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,6 +3775,7 @@ GameObject:
   - component: {fileID: 1418415942}
   - component: {fileID: 1418415941}
   - component: {fileID: 1418415943}
+  - component: {fileID: 1418415944}
   m_Layer: 0
   m_Name: Brick (14)
   m_TagString: Untagged
@@ -3553,7 +3819,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.993649, y: 15.920437}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1418415942
 SpriteRenderer:
@@ -3612,6 +3878,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1418415944
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418415939}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1490655929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,6 +3986,7 @@ GameObject:
   - component: {fileID: 1519288251}
   - component: {fileID: 1519288250}
   - component: {fileID: 1519288249}
+  - component: {fileID: 1519288252}
   m_Layer: 0
   m_Name: WallBottom
   m_TagString: Untagged
@@ -3788,6 +4078,17 @@ Transform:
   m_Father: {fileID: 1993092506}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &1519288252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519288248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41ed5a1ccdfed04a9ecd248652c6a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1612972669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3799,6 +4100,7 @@ GameObject:
   - component: {fileID: 1612972672}
   - component: {fileID: 1612972671}
   - component: {fileID: 1612972673}
+  - component: {fileID: 1612972674}
   m_Layer: 0
   m_Name: Brick (5)
   m_TagString: Untagged
@@ -3842,7 +4144,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.993555, y: 16.048477}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1612972672
 SpriteRenderer:
@@ -3901,6 +4203,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1612972674
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1612972669}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1617953141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3987,6 +4312,7 @@ GameObject:
   - component: {fileID: 1729116063}
   - component: {fileID: 1729116062}
   - component: {fileID: 1729116064}
+  - component: {fileID: 1729116065}
   m_Layer: 0
   m_Name: Brick (6)
   m_TagString: Untagged
@@ -4030,7 +4356,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.929611, y: 15.984436}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1729116063
 SpriteRenderer:
@@ -4089,6 +4415,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1729116065
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729116060}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1753046839
 GameObject:
   m_ObjectHideFlags: 0
@@ -4175,6 +4524,7 @@ GameObject:
   - component: {fileID: 1767783917}
   - component: {fileID: 1767783916}
   - component: {fileID: 1767783918}
+  - component: {fileID: 1767783919}
   m_Layer: 0
   m_Name: Brick (17)
   m_TagString: Untagged
@@ -4218,7 +4568,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.993553, y: 15.984478}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1767783917
 SpriteRenderer:
@@ -4277,6 +4627,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1767783919
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767783914}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1796484507
 GameObject:
   m_ObjectHideFlags: 0
@@ -4539,6 +4912,7 @@ GameObject:
   - component: {fileID: 1852290781}
   - component: {fileID: 1852290780}
   - component: {fileID: 1852290782}
+  - component: {fileID: 1852290783}
   m_Layer: 0
   m_Name: Brick (4)
   m_TagString: Untagged
@@ -4582,7 +4956,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.929546, y: 16.04847}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1852290781
 SpriteRenderer:
@@ -4641,6 +5015,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1852290783
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852290778}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1891780774
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,6 +5048,7 @@ GameObject:
   - component: {fileID: 1891780775}
   - component: {fileID: 1891780777}
   - component: {fileID: 1891780776}
+  - component: {fileID: 1891780778}
   m_Layer: 0
   m_Name: WallBottom (2)
   m_TagString: Untagged
@@ -4742,6 +5140,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1891780778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891780774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41ed5a1ccdfed04a9ecd248652c6a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1915535012
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,7 +5205,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1945128544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1753046840}
@@ -5001,6 +5410,7 @@ GameObject:
   - component: {fileID: 1967280254}
   - component: {fileID: 1967280253}
   - component: {fileID: 1967280255}
+  - component: {fileID: 1967280256}
   m_Layer: 0
   m_Name: Brick (16)
   m_TagString: Untagged
@@ -5044,7 +5454,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.993557, y: 16.112564}
+  m_Size: {x: 33, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &1967280254
 SpriteRenderer:
@@ -5103,6 +5513,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6640cdcc0beae494f8955f870ecc3261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSheet:
+  - {fileID: 21300000, guid: 56f35111dbbaa6142b864a216bc0242c, type: 3}
+  - {fileID: 21300000, guid: 1b29d660bdbc8ae419588a60140c96d4, type: 3}
+--- !u!50 &1967280256
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967280251}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1993092505
 GameObject:
   m_ObjectHideFlags: 0
