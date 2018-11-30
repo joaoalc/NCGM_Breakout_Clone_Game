@@ -29,7 +29,7 @@ public class MoveRacket : MonoBehaviour
         // ||  0 <- at the middle of the racket
         // ||
         // || -2 <- at the bottom of the racket
-        return 2 * (ballPos.x - racketPos.x) / racketWidth;
+        return -(2 * (ballPos.x - racketPos.x) / racketWidth);
     }
 
     void OnCollisionEnter2D(Collision2D col)
